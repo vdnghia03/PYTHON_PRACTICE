@@ -16,7 +16,7 @@ Overall, data aggregation is an important technique for modern data orchestratio
 
 When running an aggregation, there are several best practices to keep in mind
 
-![DataAggregation.png](Glossary_DE/image/DataAggregation.png)
+![DataAggregation.png](./image/DataAggregation.png)
 
 # **Aggregation vs. Pre-aggregation**
 ---
