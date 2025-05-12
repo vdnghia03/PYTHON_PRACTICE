@@ -16,3 +16,17 @@
 
 - Về anh Main Thread
     - Với việc Main Thread qua cổng, đồng nghĩa với việc dù chương trình còn thực thi hay đóng lại, việc cập nhật Main thread sẽ không còn được nữa
+    - Loi khuyen: Nen co them dong my_thread.join() de cap nhat duoc cac gia tri thay doi vao Main thread.
+
+- Các thread chạy concurent và không bị giới hạn, có bao nhiêu thread củng được miễn là đủ bộ nhớ.
+
+- Hiểu về process: Các thread được virtual enviroment biên dịch tạo ra một môi trường chung hoạt động, miễn là đủ bộ nhớ. Với process nó lại phụ thuộc vào số core CPU máy, mỗi core sử lí 1 process, có 1 gui hoạt xử lí riêng. Từ python 3.7 trở đi có thể trao đổi thông tin dữ liệu qua giữa các process. CPU 16 core tạo tối đa 16 process, với mỗi process tạo bao nhiêu thread đều được vì nó phụ thuộc bộ nhớ. Với nhiều process, nó sẽ phân chia bộ nhớ hợp lí cho từng process, bộ nhớ trong mỗi process lại chia ra cho các thread trên từng process.
+
+- Một số ứng dụng của thread: Download sử dụng thread, chia nhiều màn hình camera,....
+
+## 2. Một số vấn đề cần giải quyết
+
+- Vấn đề Race condition: Việc sử dụng các thread chạy đồng thời để thay đổi giá trị cho biến toàn cục, vì các thread chạy đồng thời nên ta sẽ không thể kiểm soát được nó sẽ được cập nhật ở thread nào
+    + Giải quyết: Sử dụng Lock()
+
+
