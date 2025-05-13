@@ -1,0 +1,18 @@
+services:
+
+  crawl_mysql:
+    image: mysql:8.0
+    container_name: tiki_mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./storage/mysql_data:/var/lib/mysql
+    env_file:
+      - ./.env
+    networks:
+      - de_network
+
+networks:
+  de_network:
+    driver: bridge
+    name: de_network
