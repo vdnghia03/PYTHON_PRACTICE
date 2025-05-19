@@ -49,7 +49,10 @@
 - Mục tiêu 1: Phải tạo được mysql docker và dùng dbeaver kết nối vào được
 
 - Mục tiêu 2: Phải xây dựng được các phương thức sử dụng thao tác với mysql bằng python
-    + Connect - .db_config.ini
+    + Connect 
     + CRUD - Tạo bảng init_db, insert dữ liệu vào mysql
 
-- Mục tiêu 3: 
+- Mục tiêu 3: Triển khai 
+    + menu_extract(website_path) -> Done : Đã lấy được các url menu_item
+
+    + page_extract(website_path, link, str(pageID))

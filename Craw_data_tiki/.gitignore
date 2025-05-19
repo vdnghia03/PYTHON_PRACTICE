@@ -1,1 +1,7 @@
 virenv/
+
+storage/
+
+__pycache__/
+
+.env
