@@ -3,6 +3,7 @@ import numpy as np
 import time
 
 
+### ========================== Dung Submit ========================================
 
 # def sum_exponent(list, name):
 #     """
@@ -110,3 +111,29 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
     for future in concurrent.futures.as_completed(futures):
         result = future.result()
         print(result)
+
+
+print("=====================================")
+
+# ========================== Dung MAP ========================================
+
+def sum_exponent(chunk):
+    result = 0  # Khởi tạo là int
+    for x in chunk:
+        time.sleep(0.01)
+        result += x**x  # Giữ int
+    # print(f"Thread is  Finish")
+    return result
+
+myList = list(range(1, 101))
+
+TOTAL_SUM = 0
+with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    results = executor.map(sum_exponent, [myList[i:i + 20] for i in range(0, len(myList), 20)])
+
+    for result in results:
+        TOTAL_SUM += result
+        # print(f"Thread result : {result}")
+
+print(f"Total result: {TOTAL_SUM}")
+
